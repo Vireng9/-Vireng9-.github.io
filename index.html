@@ -8,23 +8,26 @@
     body {
       margin: 0;
       padding: 0;
-      border: 1.5cm solid lightblue; /* light blue page border */
+      border: 1.5cm solid black; /* changed to black */
       font-family: "Segoe UI", Arial, sans-serif;
       background-color: #fdfdfd;
       color: #333;
     }
 
-    /* Layout container for compact feel */
+    /* Layout container for compact feel with side margins 0.7 */
     .page-wrap {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 0.7cm auto; /* left/right margins at 0.7 */
       background-color: #fdfdfd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+      border-radius: 6px;
+      overflow: hidden;
     }
 
-    /* Header styling (reduced height) */
+    /* Header styling (full width, light grey) */
     header {
       text-align: center;
-      padding: 8px 0 10px 0; /* compact header height */
+      padding: 8px 0 10px 0;
       background-color: lightgrey; /* light grey header */
     }
 
@@ -32,7 +35,7 @@
     header h1 {
       margin: 0;
       font-size: 2.1em;
-      color: #000080; /* dark navy blue */
+      color: #000080;
       font-weight: 700;
       letter-spacing: 0.5px;
     }
@@ -45,11 +48,17 @@
 
     header nav a {
       text-decoration: none;
-      color: #006A4E; /* bottle green */
-      font-weight: bold; /* bold links */
+      color: #006A4E;
+      font-weight: bold;
       margin: 0 10px;
       position: relative;
-      transition: color 0.25s ease, transform 0.2s ease;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition:
+        color 0.25s ease,
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     /* Smooth underline effect using pseudo-element */
@@ -60,14 +69,16 @@
       bottom: -3px;
       width: 0;
       height: 2px;
-      background-color: #004d33; /* darker bottle green */
+      background-color: #004d33;
       transition: width 0.25s ease;
     }
 
-    /* Hover effect: darken + smooth underline + slight lift */
+    /* Hover effect: darken + smooth underline + slight lift + subtle bg */
     header nav a:hover {
-      color: #004d33; /* darker green on hover */
+      color: #004d33;
       transform: translateY(-1px);
+      background-color: rgba(0, 106, 78, 0.08);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     header nav a:hover::after {
@@ -118,22 +129,26 @@
       color: #444;
     }
 
-    /* Project card styling */
+    /* Project card styling with improved hover */
     .project {
       margin-bottom: 22px;
       background: #fafafa;
       padding: 14px 16px 14px 18px;
-      border-left: 4px solid #000080; /* navy accent line */
-      border-radius: 8px; /* rounded corners */
+      border-left: 4px solid #000080;
+      border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease,
+        background-color 0.18s ease;
     }
 
-    /* Hover effect for project cards */
     .project:hover {
-      transform: translateY(-2px);
-      border-color: #004d33; /* subtle color accent on hover */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+      border-color: #004d33;
+      background-color: #ffffff;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
     }
 
     .project h4 {
@@ -157,26 +172,28 @@
       margin-bottom: 4px;
     }
 
-    /* Footer */
+    /* Footer – full width, light grey */
     footer {
       text-align: center;
-      margin: 10px 0 6px 0;
+      margin: 0;
       font-size: 0.9em;
       color: #555;
       background-color: lightgrey; /* light grey footer */
-      padding: 6px 0;
+      padding: 8px 0 6px 0;
+      width: 100%;
     }
 
     footer a {
       color: #006A4E;
       font-weight: 600;
       text-decoration: none;
-      transition: color 0.25s ease;
+      transition: color 0.25s ease, text-decoration-color 0.25s ease;
     }
 
     footer a:hover {
       color: #004d33;
       text-decoration: underline;
+      text-decoration-thickness: 2px;
     }
 
     /* Responsiveness */
@@ -184,12 +201,20 @@
       body {
         border-width: 0.8cm;
       }
+
+      .page-wrap {
+        margin: 0.5cm auto;
+        border-radius: 0;
+      }
+
       main {
         padding: 14px 16px 24px 16px;
       }
+
       header h1 {
         font-size: 1.8em;
       }
+
       header nav a {
         display: inline-block;
         margin: 2px 6px;
@@ -202,9 +227,9 @@
     <header>
       <h1>Viren Ghaghada</h1>
       <nav>
-        <a href="https://www.linkedin.com/in/virenghaghada/" target="_blank">LinkedIn</a> |
-        <a href="https://www.github.com/Vireng9/" target="_blank">GitHub</a> |
-        <a href="https://vireng9.github.io/" target="_blank">Portfolio</a> |
+        <a href="https://www.linkedin.com/in/virenghaghada/" target="_blank">LinkedIn</a>
+        <a href="https://www.github.com/Vireng9/" target="_blank">GitHub</a>
+        <a href="https://vireng9.github.io/" target="_blank">Portfolio</a>
         <a href="mailto:vireng9@yahoo.com">Email</a>
       </nav>
       <div class="red-line"></div>
@@ -213,14 +238,13 @@
     <main>
       <h2>My Portfolio</h2>
       <p>
-        A keen learner and passionate about quantitative finance — trading, portfolio risk management,
-        optimization, market microstructure, latency, and AI/ML applications. Leveraging quantitative and
-        statistical tools to design trading strategies, risk solutions, and solve complex problems.
+        A keen learner and passionate about quantitative finance — trading, portfolio risk management, optimization, market microstructure,
+        latency, and AI/ML applications. Leveraging quantitative and statistical tools to design trading strategies, risk solutions,
+        and solve complex problems.
       </p>
       <p class="note">
-        This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary
-        application — essential to solving complex problems and driving excellence. <strong>Note:</strong> For
-        project details, visit GitHub repositories.
+        This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary application — essential to
+        solving complex problems and driving excellence. <strong>Note:</strong> For project details, visit GitHub repositories.
       </p>
 
       <section class="projects">
@@ -229,9 +253,8 @@
         <article class="project">
           <h4>📈 GJR–GARCH Volatility Modelling (OOP)</h4>
           <p>
-            Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects
-            in financial time series, using Object-Oriented Programming principles for modularity,
-            scalability, and reusability.
+            Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in financial time series,
+            using Object-Oriented Programming principles for modularity, scalability, and reusability.
           </p>
           <ul>
             <li>Quantitative finance and econometrics</li>
@@ -243,8 +266,8 @@
         <article class="project">
           <h4>📊 Bollinger Band Function (OOP)</h4>
           <p>
-            Developed a reusable Bollinger Band function using Object-Oriented Programming, supporting
-            dynamic parameterization and integration into trading strategy frameworks.
+            Developed a reusable Bollinger Band function using Object-Oriented Programming, supporting dynamic parameterization and
+            integration into trading strategy frameworks.
           </p>
           <ul>
             <li>Technical analysis and trading strategy design</li>
@@ -256,10 +279,9 @@
         <article class="project">
           <h4>📉 Basis Trade with Repo Financing</h4>
           <p>
-            Designed and implemented a quantitative framework to exploit basis trading opportunities
-            between cash bonds and futures, financed through repurchase (repo) agreements, integrating
-            fixed-income pricing, repo market dynamics, and arbitrage strategy design to optimize returns
-            under funding constraints.
+            Designed and implemented a quantitative framework to exploit basis trading opportunities between cash bonds and futures,
+            financed through repurchase (repo) agreements, integrating fixed-income pricing, repo market dynamics, and arbitrage strategy
+            design to optimize returns under funding constraints.
           </p>
           <ul>
             <li>Fixed-income arbitrage and repo financing</li>
@@ -269,10 +291,11 @@
         </article>
       </section>
     </main>
-
-    <footer>
-      © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
-    </footer>
   </div>
+
+  <footer>
+     © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
+  </footer>
 </body>
 </html>
+   
