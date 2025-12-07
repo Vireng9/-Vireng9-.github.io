@@ -8,16 +8,16 @@
     body {
       margin: 0;
       padding: 0;
-      border: 1.5cm solid black; /* changed to black */
-      font-family: "Segoe UI", Arial, sans-serif;
+      border: 1.5cm solid black;
+      font-family: Verdana, sans-serif;  /* a) changed to Verdana */
       background-color: #fdfdfd;
       color: #333;
     }
 
-    /* Layout container for compact feel with side margins 0.7 */
+    /* Layout container – side margins now 0.5cm */
     .page-wrap {
       max-width: 1100px;
-      margin: 0.7cm auto; /* left/right margins at 0.7 */
+      margin: 0.5cm auto;  /* c) left/right margins 0.5 */
       background-color: #fdfdfd;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
       border-radius: 6px;
@@ -26,15 +26,15 @@
 
     /* Header wrapper to ensure full-width light grey and red line */
     .header-wrapper {
-      background-color: lightgrey;        /* same as footer, full width */
+      background-color: lightgrey;
       width: 100%;
     }
 
     /* Header styling (inside wrapper, no extra background) */
     header {
       text-align: center;
-      padding: 8px 0 4px 0;              /* reduced bottom padding so grey doesn’t appear below red line */
-      background-color: transparent;      /* moved bg to wrapper */
+      padding: 8px 0 4px 0;
+      background-color: transparent;
     }
 
     /* Name styling */
@@ -64,7 +64,7 @@
                   background-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    /* Remove the old animated underline so header height stays tight */
+    /* No animated underline to keep header height tight */
     header nav a::after {
       content: none;
     }
@@ -76,7 +76,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Red line below links – full page width, directly below grey */
+    /* Red line below links – full page width */
     .red-line {
       border-top: 4px solid darkred;
       margin: 0;
@@ -160,15 +160,16 @@
       margin-bottom: 4px;
     }
 
-    /* Footer – full width, light grey */
+    /* Footer – full width, light grey, bold text */
     footer {
       text-align: center;
       margin: 0;
       font-size: 0.9em;
       color: #555;
-      background-color: lightgrey; /* light grey footer */
+      background-color: lightgrey;
       padding: 8px 0 6px 0;
       width: 100%;
+      font-weight: bold;  /* b) footer text bold */
     }
 
     footer a {
@@ -284,7 +285,7 @@
     </main>
   </div>
 
-  <!-- Footer: full-width light grey -->
+  <!-- Footer: full-width light grey, bold text -->
   <footer>
     © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
   </footer>
