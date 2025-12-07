@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Portfolio - Viren Ghaghada</title>
   <style>
     /* Page border */
@@ -24,11 +24,17 @@
       overflow: hidden;
     }
 
-    /* Header styling (full width, light grey) */
+    /* Header wrapper to ensure full-width light grey and red line */
+    .header-wrapper {
+      background-color: lightgrey;        /* same as footer, full width */
+      width: 100%;
+    }
+
+    /* Header styling (inside wrapper, no extra background) */
     header {
       text-align: center;
-      padding: 8px 0 10px 0;
-      background-color: lightgrey; /* light grey header */
+      padding: 8px 0 4px 0;              /* reduced bottom padding so grey doesn’t appear below red line */
+      background-color: transparent;      /* moved bg to wrapper */
     }
 
     /* Name styling */
@@ -40,7 +46,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* Navigation links */
+    /* Navigation links (single line with | separators) */
     header nav {
       margin-top: 4px;
       font-size: 1.02em;
@@ -50,30 +56,19 @@
       text-decoration: none;
       color: #006A4E;
       font-weight: bold;
-      margin: 0 10px;
+      margin: 0 3px;
       position: relative;
-      padding: 4px 6px;
+      padding: 4px 2px;
       border-radius: 4px;
-      transition:
-        color 0.25s ease,
-        transform 0.2s ease,
-        background-color 0.2s ease,
-        box-shadow 0.2s ease;
+      transition: color 0.25s ease, transform 0.2s ease,
+                  background-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    /* Smooth underline effect using pseudo-element */
+    /* Remove the old animated underline so header height stays tight */
     header nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 0;
-      height: 2px;
-      background-color: #004d33;
-      transition: width 0.25s ease;
+      content: none;
     }
 
-    /* Hover effect: darken + smooth underline + slight lift + subtle bg */
     header nav a:hover {
       color: #004d33;
       transform: translateY(-1px);
@@ -81,14 +76,10 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    header nav a:hover::after {
-      width: 100%;
-    }
-
-    /* Red line below links – full header and page width */
+    /* Red line below links – full page width, directly below grey */
     .red-line {
       border-top: 4px solid darkred;
-      margin: 8px 0 0 0;
+      margin: 0;
       width: 100%;
     }
 
@@ -137,11 +128,8 @@
       border-left: 4px solid #000080;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-      transition:
-        transform 0.18s ease,
-        box-shadow 0.18s ease,
-        border-color 0.18s ease,
-        background-color 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease,
+                  border-color 0.18s ease, background-color 0.18s ease;
     }
 
     .project:hover {
@@ -201,50 +189,51 @@
       body {
         border-width: 0.8cm;
       }
-
       .page-wrap {
         margin: 0.5cm auto;
         border-radius: 0;
       }
-
       main {
         padding: 14px 16px 24px 16px;
       }
-
       header h1 {
         font-size: 1.8em;
       }
-
       header nav a {
         display: inline-block;
-        margin: 2px 6px;
+        margin: 2px 4px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrap">
+  <!-- Header: full-width grey + full-width red line -->
+  <div class="header-wrapper">
     <header>
       <h1>Viren Ghaghada</h1>
       <nav>
-        <a href="https://www.linkedin.com/in/virenghaghada/" target="_blank">LinkedIn</a>
-        <a href="https://www.github.com/Vireng9/" target="_blank">GitHub</a>
-        <a href="https://vireng9.github.io/" target="_blank">Portfolio</a>
+        <a href="https://www.linkedin.com/in/virenghaghada/" target="_blank">LinkedIn</a> |
+        <a href="https://www.github.com/Vireng9/" target="_blank">GitHub</a> |
+        <a href="https://vireng9.github.io/" target="_blank">Portfolio</a> |
         <a href="mailto:vireng9@yahoo.com">Email</a>
       </nav>
-      <div class="red-line"></div>
     </header>
+    <div class="red-line"></div>
+  </div>
 
+  <!-- Main content within page-wrap -->
+  <div class="page-wrap">
     <main>
       <h2>My Portfolio</h2>
       <p>
-        A keen learner and passionate about quantitative finance — trading, portfolio risk management, optimization, market microstructure,
-        latency, and AI/ML applications. Leveraging quantitative and statistical tools to design trading strategies, risk solutions,
-        and solve complex problems.
+        A keen learner and passionate about quantitative finance — trading, portfolio risk management,
+        optimization, market microstructure, latency, and AI/ML applications. Leveraging quantitative and
+        statistical tools to design trading strategies, risk solutions, and solve complex problems.
       </p>
       <p class="note">
-        This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary application — essential to
-        solving complex problems and driving excellence. <strong>Note:</strong> For project details, visit GitHub repositories.
+        This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary
+        application — essential to solving complex problems and driving excellence. <strong>Note:</strong> For
+        project details, visit GitHub repositories.
       </p>
 
       <section class="projects">
@@ -253,8 +242,9 @@
         <article class="project">
           <h4>📈 GJR–GARCH Volatility Modelling (OOP)</h4>
           <p>
-            Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in financial time series,
-            using Object-Oriented Programming principles for modularity, scalability, and reusability.
+            Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects
+            in financial time series, using Object-Oriented Programming principles for modularity,
+            scalability, and reusability.
           </p>
           <ul>
             <li>Quantitative finance and econometrics</li>
@@ -266,8 +256,8 @@
         <article class="project">
           <h4>📊 Bollinger Band Function (OOP)</h4>
           <p>
-            Developed a reusable Bollinger Band function using Object-Oriented Programming, supporting dynamic parameterization and
-            integration into trading strategy frameworks.
+            Developed a reusable Bollinger Band function using Object-Oriented Programming, supporting dynamic
+            parameterization and integration into trading strategy frameworks.
           </p>
           <ul>
             <li>Technical analysis and trading strategy design</li>
@@ -279,9 +269,10 @@
         <article class="project">
           <h4>📉 Basis Trade with Repo Financing</h4>
           <p>
-            Designed and implemented a quantitative framework to exploit basis trading opportunities between cash bonds and futures,
-            financed through repurchase (repo) agreements, integrating fixed-income pricing, repo market dynamics, and arbitrage strategy
-            design to optimize returns under funding constraints.
+            Designed and implemented a quantitative framework to exploit basis trading opportunities between
+            cash bonds and futures, financed through repurchase (repo) agreements, integrating fixed-income
+            pricing, repo market dynamics, and arbitrage strategy design to optimize returns under funding
+            constraints.
           </p>
           <ul>
             <li>Fixed-income arbitrage and repo financing</li>
@@ -293,9 +284,9 @@
     </main>
   </div>
 
+  <!-- Footer: full-width light grey -->
   <footer>
-     © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
+    © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
   </footer>
 </body>
 </html>
-   
