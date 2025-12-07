@@ -1,77 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Viren Ghaghada | Quant Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 1in;   /* default margins restored */
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viren Ghaghada | Quant Portfolio</title>
+    <style>
+        body {
+            margin-left: 0.7in;
+            margin-right: 0.7in;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333333;
+        }
 
-    /* Header */
-    header {
-      background: #f0f0f0; /* light grey */
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        header, footer {
+            background-color: lightgrey;
+            padding: 15px;
+            text-align: center;
+        }
 
-    header h1 {
-      margin: 0;
-      color: darkblue;
-      font-size: 2rem;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
 
-    nav {
-      margin-top: 10px;
-    }
+        nav {
+            margin-top: 10px;
+        }
 
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-    }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+        }
 
-    section {
-      padding: 20px;
-    }
+        nav a:hover {
+            color: #007acc;
+        }
 
-    h2 {
-      color: darkblue;
-    }
-  </style>
+        main {
+            padding: 20px 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #007acc;
+        }
+
+        .projects h3 {
+            margin-top: 20px;
+            color: #444444;
+        }
+
+        ul {
+            margin: 5px 0 15px 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Viren Ghaghada</h1>
-    <nav>
-      <a href="#portfolio">My Portfolio</a>
-      <a href="#objective">Objective</a>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <h1>Viren Ghaghada</h1>
+        <nav>
+            <a href="https://linkedin.com/in/your-link" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/vireng9" target="_blank">GitHub</a> |
+            <a href="https://vireng9.github.io" target="_blank">Portfolio</a> |
+            <a href="mailto:your-email@example.com">Email</a>
+        </nav>
+    </header>
 
-  <main>
-    <!-- My Portfolio Section -->
-    <section id="portfolio">
-      <h2>My Portfolio</h2>
-      <p>
-        A keen learner and passionate about quantitative finance — trading, portfolio risk management, optimization, market microstructure, latency, and AI/ML applications. Leveraging quant and statistical tools to design trading strategies, risk solutions, and solve complex problems. This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary application — essential to solving complex problems and driving excellence.
-      </p>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <p>
+                A keen learner and passionate about quantitative finance — trading, portfolio risk management,
+                optimization, market microstructure, latency, and AI/ML applications. Leveraging quant and statistical
+                tools to design trading strategies, risk solutions, and solve complex problems.
+            </p>
+            <p>
+                This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary
+                application — essential to solving complex problems and driving excellence.
+            </p>
+            <p><strong>Note:</strong> For project details, visit GitHub repositories.</p>
+        </section>
 
-    <!-- Objective Section -->
-    <section id="objective">
-      <h2>Objective</h2>
-      <p>
-        To apply my skills in quantitative finance and technology to develop innovative solutions in trading, portfolio management, and risk optimization, while continuously learning and adapting to new challenges in the financial markets.
-      </p>
-    </section>
-  </main>
+        <section class="projects">
+            <h2>📂 Featured Quant Projects</h2>
+
+            <h3>📈 GJR–GARCH Volatility Modelling (OOP)</h3>
+            <p>
+                Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in
+                financial time series. Designed using Object-Oriented Programming principles for modularity,
+                scalability, and reusability.
+            </p>
+            <ul>
+                <li>Quantitative finance & econometrics</li>
+                <li>Python programming (OOP design patterns)</li>
+                <li>Time series analysis & risk modelling</li>
+            </ul>
+
+            <h3>📊 Bollinger Band Function (OOP)</h3>
+            <p>
+                Developed a reusable Bollinger Band function using Object-Oriented Programming. Designed to support
+                dynamic parameterization and integration into trading strategy frameworks.
+            </p>
+            <ul>
+                <li>Technical analysis & trading strategy design</li>
+                <li>Python programming (OOP principles)</li>
+                <li>Data visualization & financial analytics</li>
+            </ul>
+
+            <h3>📉 Basis Trade with Repo Financing</h3>
+            <p>
+                Designed and implemented a quantitative framework to exploit basis trading opportunities between cash
+                bonds and futures, financed through repurchase (repo) agreements. The project integrates fixed-income
+                pricing, repo market dynamics, and arbitrage strategy design to optimize returns under funding
+                constraints.
+            </p>
+            <ul>
+                <li>Fixed-income arbitrage & repo financing</li>
+                <li>Quantitative trading strategy development</li>
+                <li>Risk management & market microstructure analysis</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Viren Ghaghada | Portfolio powered by GitHub Pages</p>
+    </footer>
 </body>
 </html>
